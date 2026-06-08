@@ -18,7 +18,10 @@ add_definitions(
     -DHAVE_MONITOR_BINARY
 )
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
+# -Wno-narrowing: the vendored emulator cores (nestopia, vice) have benign narrowing
+# conversions in braced-init lists; clang treats these as hard errors and -Werror/strict
+# GCC promotes them too. Suppress globally so the build is portable across toolchains.
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive -Wno-narrowing")
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-implicit-function-declaration")
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-macro-redefined")
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-incompatible-pointer-types")
