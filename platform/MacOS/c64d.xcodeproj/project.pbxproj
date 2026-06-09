@@ -1242,7 +1242,7 @@
 		65A01F7FB6C74A878EAA09D8 /* CImGuiTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFCB90A5A474448015DDAB47 /* CImGuiTests.cpp */; };
 		672871368F8670027346A66E /* CTestViceSoundIntegration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56CA15119B72D83FA8D28402 /* CTestViceSoundIntegration.cpp */; };
 		67FA6824AF024E7FAB452473 /* ninja_snespad.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E255FCFFBBD47B094E86E22 /* ninja_snespad.c */; };
-		696F9ED77B43AAFACF8F4C0C /* CTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2413F443CE11DD5341DB8815 /* CTest.cpp */; };
+		C7E57D0001000000000000C1 /* CTestSuiteRetroDebugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7E57D0001000000000000F1 /* CTestSuiteRetroDebugger.cpp */; };
 		70E0BAA760B77EEE82DF4426 /* CTestViceMemoryAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1491084F82359D55D18ABE77 /* CTestViceMemoryAccess.cpp */; };
 		74302C8A36924B16986365CA /* wordcraft-dongle.c in Sources */ = {isa = PBXBuildFile; fileRef = 557E743CB3AD48E79F26D896 /* wordcraft-dongle.c */; };
 		7B278D00EA71FFAC71EE1F3B /* render2x4rgbi.c in Sources */ = {isa = PBXBuildFile; fileRef = 41ADF0B012E6F6C5227A28B5 /* render2x4rgbi.c */; };
@@ -1386,7 +1386,6 @@
 		E71F42CE0A6F7EA5A1F93B78 /* CTestEmulatorStartup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16C4186DF828B69D9C07164 /* CTestEmulatorStartup.cpp */; };
 		E71F42CF0A6F7EA5A1F93B79 /* CTestVicEditorZoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C16C4187DF828B69D9C07165 /* CTestVicEditorZoom.cpp */; };
 		E8761A3EA2D78FDE2A003317 /* render1x1rgbi.c in Sources */ = {isa = PBXBuildFile; fileRef = B718C01BB3BDB12E5D1BA027 /* render1x1rgbi.c */; };
-		E9ABC5AB6700C93659AD7658 /* CTestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAF1144CB044ED653736CF6A /* CTestRunner.cpp */; };
 		EB775A5E9C76458D9C4AA739 /* CTestSidStatusWaveform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E24D357704D46D686C2DB53 /* CTestSidStatusWaveform.cpp */; };
 		EBA716F30E9E40F8AF3B4EFD /* userport_synergy_joystick.c in Sources */ = {isa = PBXBuildFile; fileRef = FF46CD67705B41EE9DAD5EA7 /* userport_synergy_joystick.c */; };
 		F0C8DB0A6EE1E98A10166619 /* video-render-palntsc.c in Sources */ = {isa = PBXBuildFile; fileRef = F4510E35AE843382B9B4C328 /* video-render-palntsc.c */; };
@@ -1394,7 +1393,6 @@
 		F1C2D78204CB9903F8BD276F /* CTestViceSnapshot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED7B5E227B00A9A7E99F7EBD /* CTestViceSnapshot.cpp */; };
 		F7A2B83E9D0C4F6A1E5B7D3C /* CTestOpenAllViews.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E63A8B4D2F1C7E9A0D5B3F71 /* CTestOpenAllViews.cpp */; };
 		FB219FEA879788DDD91FDFF7 /* CTestViceBreakpoints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E721F7915ED100746642B000 /* CTestViceBreakpoints.cpp */; };
-		FBF02338E25BCABD0612F204 /* CTestSuite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE12F5319337E194C76EEA2 /* CTestSuite.cpp */; };
 		GFXOUT001000000000000001 /* artstudiodrv.c in Sources */ = {isa = PBXBuildFile; fileRef = GFXOUT001000000000000011 /* artstudiodrv.c */; };
 		GFXOUT001000000000000003 /* minipaintdrv.c in Sources */ = {isa = PBXBuildFile; fileRef = GFXOUT001000000000000013 /* minipaintdrv.c */; };
 		GFXOUT001000000000000004 /* pngdrv.c in Sources */ = {isa = PBXBuildFile; fileRef = GFXOUT001000000000000014 /* pngdrv.c */; };
@@ -1482,7 +1480,7 @@
 		1A19AE86FD18BCCCCCCF1DA8 /* render2x2rgbi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = render2x2rgbi.c; sourceTree = "<group>"; };
 		1F1D72B7C878B8163E966E7D /* CTestViceDrive1541.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestViceDrive1541.h; path = ../../src/Tests/CTestViceDrive1541.h; sourceTree = "<group>"; };
 		21AC937D823AF4ED31602BF4 /* CPluginsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPluginsManager.h; sourceTree = "<group>"; };
-		2413F443CE11DD5341DB8815 /* CTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTest.cpp; path = ../../src/Tests/CTest.cpp; sourceTree = "<group>"; };
+		C7E57D0001000000000000F1 /* CTestSuiteRetroDebugger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestSuiteRetroDebugger.cpp; path = ../../src/Tests/CTestSuiteRetroDebugger.cpp; sourceTree = "<group>"; };
 		24B3B285D22D4A7E89B4952D /* tapecart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tapecart.c; sourceTree = "<group>"; };
 		2A311602794541A4B9869795 /* paperclip2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paperclip2.c; sourceTree = "<group>"; };
 		2AD9A2ECAD74F378A667D20A /* CTestViceMemoryAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestViceMemoryAccess.h; path = ../../src/Tests/CTestViceMemoryAccess.h; sourceTree = "<group>"; };
@@ -4090,10 +4088,8 @@
 		56CA15119B72D83FA8D28402 /* CTestViceSoundIntegration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestViceSoundIntegration.cpp; path = ../../src/Tests/CTestViceSoundIntegration.cpp; sourceTree = "<group>"; };
 		573C1FAD87706C93DBF1880D /* CDebugInterfaceAtariTasks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDebugInterfaceAtariTasks.cpp; sourceTree = "<group>"; };
 		5B1FA6E83D0C927A4E8B63F0 /* CTestViceInstructionStepping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestViceInstructionStepping.cpp; path = ../../src/Tests/CTestViceInstructionStepping.cpp; sourceTree = "<group>"; };
-		5F5FE83C8189E7D16B002E9E /* CTestRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestRunner.h; path = ../../src/Tests/CTestRunner.h; sourceTree = "<group>"; };
 		67EB1A891226106E065D612A /* CTestViceDrive1541.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestViceDrive1541.cpp; path = ../../src/Tests/CTestViceDrive1541.cpp; sourceTree = "<group>"; };
 		681D899FB87330853D12B799 /* CViewC64MemoryBank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CViewC64MemoryBank.cpp; sourceTree = "<group>"; };
-		6B084B589AE63FFD22B94411 /* CTestSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestSuite.h; path = ../../src/Tests/CTestSuite.h; sourceTree = "<group>"; };
 		7291E98CF8736BD2C610B903 /* video-render-rgbi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "video-render-rgbi.c"; sourceTree = "<group>"; };
 		731097FF510E196CDB32601F /* CViewC64MemoryBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CViewC64MemoryBank.h; sourceTree = "<group>"; };
 		7394243CF375410BB005A81E /* archdep_tick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = archdep_tick.c; sourceTree = "<group>"; };
@@ -4103,7 +4099,7 @@
 		8208218B9364469EADA3E9FB /* userport_diag_pin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = userport_diag_pin.c; sourceTree = "<group>"; };
 		8732E43556FC34905284B972 /* render-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "render-common.h"; sourceTree = "<group>"; };
 		88E24F7B4B5A5A3EF78E9ADB /* CTestViceCiaHooks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestViceCiaHooks.cpp; path = ../../src/Tests/CTestViceCiaHooks.cpp; sourceTree = "<group>"; };
-		8AB542A22A0940AB956A7B96 /* CTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTest.h; path = ../../src/Tests/CTest.h; sourceTree = "<group>"; };
+		C7E57D0002000000000000F2 /* CTestSuiteRetroDebugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestSuiteRetroDebugger.h; path = ../../src/Tests/CTestSuiteRetroDebugger.h; sourceTree = "<group>"; };
 		8B8F2261D45C43A54B50BAF3 /* CTestVicePeripherals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestVicePeripherals.cpp; path = ../../src/Tests/CTestVicePeripherals.cpp; sourceTree = "<group>"; };
 		8E8E498B02574884B727775E /* CTestSidStatusWaveform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestSidStatusWaveform.h; path = ../../src/Tests/CTestSidStatusWaveform.h; sourceTree = "<group>"; };
 		97A1E3C512514FA3B9A40DFC /* mouse_paddle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mouse_paddle.c; sourceTree = "<group>"; };
@@ -4345,14 +4341,12 @@
 		CBAD28973D804D59B443B2C1 /* paperclip64e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paperclip64e.c; sourceTree = "<group>"; };
 		CDWSLAY000000000002 /* CDefaultWorkspaceLayouts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDefaultWorkspaceLayouts.cpp; sourceTree = "<group>"; };
 		CDWSLAY000000000003 /* CDefaultWorkspaceLayouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDefaultWorkspaceLayouts.h; sourceTree = "<group>"; };
-		CEE12F5319337E194C76EEA2 /* CTestSuite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestSuite.cpp; path = ../../src/Tests/CTestSuite.cpp; sourceTree = "<group>"; };
 		D04D5F3E7AB16C9DAE2F3041 /* CTestVicEditorCursor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestVicEditorCursor.cpp; path = ../../src/Tests/CTestVicEditorCursor.cpp; sourceTree = "<group>"; };
 		D1E2F3A4B5C60000000011 /* CViewInputEventsTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CViewInputEventsTable.cpp; sourceTree = "<group>"; };
 		D1E2F3A4B5C60000000012 /* CViewInputEventsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CViewInputEventsTable.h; sourceTree = "<group>"; };
 		D6402D64A004B004C004D004 /* CTestAutoloadD64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestAutoloadD64.h; path = ../../src/Tests/CTestAutoloadD64.h; sourceTree = "<group>"; };
 		D6402E75B004B004C004D004 /* CTestViceRewindWhileRunning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestViceRewindWhileRunning.h; path = ../../src/Tests/CTestViceRewindWhileRunning.h; sourceTree = "<group>"; };
 		D6FDB99046BD4E4E8852AEA2 /* paperclip64sc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paperclip64sc.c; sourceTree = "<group>"; };
-		DAF1144CB044ED653736CF6A /* CTestRunner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestRunner.cpp; path = ../../src/Tests/CTestRunner.cpp; sourceTree = "<group>"; };
 		DAS10000000000000002 /* CTestDisassemblySelection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestDisassemblySelection.cpp; path = ../../src/Tests/CTestDisassemblySelection.cpp; sourceTree = "<group>"; };
 		DAS10000000000000003 /* CTestDisassemblySelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTestDisassemblySelection.h; path = ../../src/Tests/CTestDisassemblySelection.h; sourceTree = "<group>"; };
 		DC2763289C1642B99098411C /* waasoft_dongle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = waasoft_dongle.c; sourceTree = "<group>"; };
@@ -4371,7 +4365,6 @@
 		EC190093DFFB4EA58A29153D /* userport_superpad64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = userport_superpad64.c; sourceTree = "<group>"; };
 		ED7B5E227B00A9A7E99F7EBD /* CTestViceSnapshot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestViceSnapshot.cpp; path = ../../src/Tests/CTestViceSnapshot.cpp; sourceTree = "<group>"; };
 		EE50AE9CE598D6DE6EBC39F0 /* render-common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "render-common.c"; sourceTree = "<group>"; };
-		EF77E583AC8D8910615707F0 /* ITestCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ITestCallback.h; path = ../../src/Tests/ITestCallback.h; sourceTree = "<group>"; };
 		F1AD6A0C5922883AF907B19D /* CTestViceEmbeddedRoms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CTestViceEmbeddedRoms.cpp; path = ../../src/Tests/CTestViceEmbeddedRoms.cpp; sourceTree = "<group>"; };
 		F441481B47F642F4A5A8791F /* userport_hummer_joystick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = userport_hummer_joystick.c; sourceTree = "<group>"; };
 		F4510E35AE843382B9B4C328 /* video-render-palntsc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "video-render-palntsc.c"; sourceTree = "<group>"; };
@@ -8312,13 +8305,8 @@
 		AB8A7C43AA79B5F99563E20C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				EF77E583AC8D8910615707F0 /* ITestCallback.h */,
-				8AB542A22A0940AB956A7B96 /* CTest.h */,
-				2413F443CE11DD5341DB8815 /* CTest.cpp */,
-				5F5FE83C8189E7D16B002E9E /* CTestRunner.h */,
-				DAF1144CB044ED653736CF6A /* CTestRunner.cpp */,
-				6B084B589AE63FFD22B94411 /* CTestSuite.h */,
-				CEE12F5319337E194C76EEA2 /* CTestSuite.cpp */,
+				C7E57D0001000000000000F1 /* CTestSuiteRetroDebugger.cpp */,
+				C7E57D0002000000000000F2 /* CTestSuiteRetroDebugger.h */,
 				402A7A1394DEB808D0479958 /* CTestEmulatorStartup.h */,
 				C16C4186DF828B69D9C07164 /* CTestEmulatorStartup.cpp */,
 				AB1300000000000000000028 /* CTestC64UBackendRegistration.h */,
@@ -8577,9 +8565,7 @@
 				418D83012733D31F00CFFD8E /* RetroDebuggerAppInit.cpp in Sources */,
 				418D83022733D31F00CFFD8E /* RetroDebuggerAppInit.h in Sources */,
 				MACOS0000000000000000002 /* RetroDebuggerMacOS.mm in Sources */,
-				696F9ED77B43AAFACF8F4C0C /* CTest.cpp in Sources */,
-				E9ABC5AB6700C93659AD7658 /* CTestRunner.cpp in Sources */,
-				FBF02338E25BCABD0612F204 /* CTestSuite.cpp in Sources */,
+				C7E57D0001000000000000C1 /* CTestSuiteRetroDebugger.cpp in Sources */,
 				E71F42CE0A6F7EA5A1F93B78 /* CTestEmulatorStartup.cpp in Sources */,
 				GT2E000000000000000000A1 /* CTestGoatTrackerExport.cpp in Sources */,
 				GT2E000000000000000000A3 /* CTestGT2ExportComan07.cpp in Sources */,

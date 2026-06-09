@@ -1637,9 +1637,7 @@ add_executable(retrodebugger
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Tools/Shaders/CRenderShaderCRTMonitorOpenGL4.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Tools/CGuiLockableList.cpp"
 
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTest.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTestRunner.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTestSuite.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTestSuiteRetroDebugger.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTestC64UBackendRegistration.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTestEmulatorStartup.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/Tests/CTestVicEditorZoom.cpp"

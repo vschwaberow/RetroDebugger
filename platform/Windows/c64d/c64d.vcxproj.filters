@@ -2568,9 +2568,6 @@
     <ClCompile Include="..\src.Windows\arch\ui-resources.c">
       <Filter>Source Files\src.Windows\arch</Filter>
     </ClCompile>
-    <ClCompile Include="..\src.Windows\getopt.c">
-      <Filter>Source Files\src.Windows</Filter>
-    </ClCompile>
     <ClCompile Include="..\src.Windows\win-gettimeofday.cpp">
       <Filter>Source Files\src.Windows</Filter>
     </ClCompile>
@@ -2745,13 +2742,7 @@
     <ClCompile Include="..\..\..\src\Views\Nes\CViewNesStatePPU.cpp">
       <Filter>Source Files\src\Views\Nes</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\Tests\CTest.cpp">
-      <Filter>Source Files\src\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\Tests\CTestRunner.cpp">
-      <Filter>Source Files\src\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\Tests\CTestSuite.cpp">
+    <ClCompile Include="..\..\..\src\Tests\CTestSuiteRetroDebugger.cpp">
       <Filter>Source Files\src\Tests</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\src\Tests\CTestC64UBackendRegistration.cpp">
@@ -7113,7 +7104,7 @@
     <ClInclude Include="..\..\..\src\Views\Nes\CViewNesStatePPU.h">
       <Filter>Source Files\src\Views\Nes</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\Tests\CTest.h">
+    <ClInclude Include="..\..\..\src\Tests\CTestSuiteRetroDebugger.h">
       <Filter>Source Files\src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\Tests\CTestC64UBackendRegistration.h">
@@ -7129,15 +7120,6 @@
       <Filter>Source Files\src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\Tests\CTestTerminalEmulator.h">
-      <Filter>Source Files\src\Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\Tests\CTestRunner.h">
-      <Filter>Source Files\src\Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\Tests\CTestSuite.h">
-      <Filter>Source Files\src\Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\Tests\ITestCallback.h">
       <Filter>Source Files\src\Tests</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\Tests\CTestEmulatorStartup.h">

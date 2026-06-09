@@ -1530,9 +1530,7 @@
     <ClCompile Include="..\..\..\src\Views\C64\CViewC64BreakpointsIrq.cpp" />
     <ClCompile Include="..\..\..\src\Views\C64\CViewC64ColorRamScreen.cpp" />
     <ClCompile Include="..\..\..\src\Views\C64\CViewC64Disassembly.cpp" />
-    <ClCompile Include="..\..\..\src\Tests\CTest.cpp" />
-    <ClCompile Include="..\..\..\src\Tests\CTestRunner.cpp" />
-    <ClCompile Include="..\..\..\src\Tests\CTestSuite.cpp" />
+    <ClCompile Include="..\..\..\src\Tests\CTestSuiteRetroDebugger.cpp" />
     <ClCompile Include="..\..\..\src\Tests\CTestGoatTrackerExport.cpp" />
     <ClCompile Include="..\..\..\src\Tests\CTestC64UBackendRegistration.cpp" /><ClCompile Include="..\..\..\src\Tests\CTestAutoLayoutPreservation.cpp" />
     <ClCompile Include="..\..\..\src\Tests\CTestEmulatorStartup.cpp" />
@@ -1702,7 +1700,6 @@
     <ClCompile Include="..\src.Windows\arch\mididrv.c" />
     <ClCompile Include="..\src.Windows\arch\system.c" />
     <ClCompile Include="..\src.Windows\arch\ui-resources.c" />
-    <ClCompile Include="..\src.Windows\getopt.c" />
     <ClCompile Include="..\src.Windows\hardsid\hardsid-win32-drv.c" />
     <ClCompile Include="..\src.Windows\hardsid\hardsid.c" />
     <ClCompile Include="..\src.Windows\hardsid\hs-win32-dll.c" />
@@ -3041,15 +3038,12 @@
     <ClInclude Include="..\..\..\src\Views\C64\CViewC64BreakpointsIrq.h" />
     <ClInclude Include="..\..\..\src\Views\C64\CViewC64ColorRamScreen.h" />
     <ClInclude Include="..\..\..\src\Views\C64\CViewC64Disassembly.h" />
-    <ClInclude Include="..\..\..\src\Tests\CTest.h" />
+    <ClInclude Include="..\..\..\src\Tests\CTestSuiteRetroDebugger.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestC64UBackendRegistration.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestC64URomBypass.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestC64UFtpProtocol.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestC64UTelnetProtocol.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestTerminalEmulator.h" />
-    <ClInclude Include="..\..\..\src\Tests\CTestRunner.h" />
-    <ClInclude Include="..\..\..\src\Tests\CTestSuite.h" />
-    <ClInclude Include="..\..\..\src\Tests\ITestCallback.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestEmulatorStartup.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestVicEditorZoom.h" />
     <ClInclude Include="..\..\..\src\Tests\CTestVicEditorCursor.h" />

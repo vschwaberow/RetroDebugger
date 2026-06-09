@@ -19,4 +19,8 @@ public:
 	{
 		CTestSuiteRegisterRetroDebuggerTests(tests);
 	}
+
+	// Optional tests = the removable plugins (Fire/Fireworks/Remapper/
+	// FlameTiles/Fade). Routes the base-class hook to the plugin registry.
+	virtual void SetIncludeOptionalTests(bool include) override;
 };
