@@ -34,6 +34,8 @@ rd_copy_common() {
   mkdir -p "$release_dir/tools"
   cp -R "$root/tools/c64d-champ" "$release_dir/tools/"
   cp -R "$root/tools/websockets-debugger-test" "$release_dir/tools/"
+  # Never ship node_modules in releases.
+  find "$release_dir/tools" -type d -name node_modules -prune -exec rm -rf {} +
 }
 
 # Zip the release dir (top-level folder preserved) and move the zip to releases/.
