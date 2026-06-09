@@ -38,8 +38,15 @@ jobs:
             libwayland-dev \
             libxkbcommon-dev
 
-      - name: Build RetroDebugger
+      - name: Build and package release
         run: |
-          chmod +x ./build-linux.sh
-          ./build-linux.sh
-          
+          set -euxo pipefail
+          chmod +x ./tools/make-release/make-release-linux.sh
+          ./tools/make-release/make-release-linux.sh
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RetroDebugger-linux
+          path: releases/*.zip
+          if-no-files-found: error
