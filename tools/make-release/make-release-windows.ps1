@@ -86,7 +86,13 @@ $Exe = Join-Path $OutDir 'Retro Debugger.exe'
 if (-not (Test-Path $Exe)) { $Exe = Join-Path $OutDir 'retrodebugger.exe' }
 if (-not (Test-Path $Exe)) { $Exe = Join-Path $OutDir 'c64d.exe' }
 if (-not (Test-Path $Exe)) { throw "Built executable not found in $OutDir" }
-Copy-Item $Exe $ReleaseDir
+# Ship the build output (e.g. c64d.exe / "Retro Debugger.exe") as
+# retrodebugger-notsigned.exe. The "-notsigned" suffix is intentional: the
+# binary is not yet code-signed.
+# TODO (future phase): code-sign with the Certum certificate and ship it as
+# retrodebugger.exe instead. The Certum certificate is currently going through
+# verification and will be available soon.
+Copy-Item $Exe (Join-Path $ReleaseDir 'retrodebugger-notsigned.exe')
 
 $ReleasesDir = Join-Path $Root 'releases'
 New-Item -ItemType Directory -Force -Path $ReleasesDir | Out-Null
