@@ -1,6 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+usage() {
+  cat <<'EOF'
+Usage: make-release-linux.sh [--no-zip]
+
+  (default)  Assemble the release and produce a .zip in ./releases/
+             (RetroDebugger-v<version>-linux-<arch>.zip).
+  --no-zip   Assemble the release FOLDER in ./releases/ but do not zip it.
+             Intended for CI: GitHub Actions zips the uploaded folder once,
+             avoiding a pointless pack -> unpack -> repack round-trip.
+             Prints the folder path; under GitHub Actions it also sets the
+             step outputs 'release_dir' and 'artifact_name'.
+  -h|--help  Show this help.
+EOF
+}
+
+NO_ZIP=0
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --no-zip)  NO_ZIP=1; shift ;;
+    -h|--help) usage; exit 0 ;;
+    *)         echo "ERROR: unknown option: $1" >&2; usage >&2; exit 1 ;;
+  esac
+done
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=_release-common.sh
 source "$SCRIPT_DIR/_release-common.sh"
@@ -18,7 +42,8 @@ case "$(uname -m)" in
 esac
 
 RELEASE_NAME="RetroDebugger-v$VERSION"
-ZIP_NAME="RetroDebugger-v$VERSION-linux-$ARCH.zip"
+ARTIFACT_NAME="RetroDebugger-v$VERSION-linux-$ARCH"
+ZIP_NAME="$ARTIFACT_NAME.zip"
 
 echo "==> [1/5] Staging $RELEASE_NAME (linux-$ARCH)"
 STAGE="$(rd_make_stage "$VERSION")"
@@ -43,10 +68,26 @@ BIN="$ROOT/build/retrodebugger"
 [ -f "$BIN" ] || { echo "ERROR: built binary not found at $BIN" >&2; exit 1; }
 cp "$BIN" "$RELEASE_DIR/"
 
-echo "==> [4/5] Packaging $ZIP_NAME"
-FINAL="$(rd_package_and_collect "$ROOT" "$STAGE" "$RELEASE_NAME" "$ZIP_NAME")"
+mkdir -p "$ROOT/releases"
 
-echo "==> [5/5] Cleaning staging dir"
-rm -rf "$STAGE"
+if [ "$NO_ZIP" -eq 1 ]; then
+  echo "==> [4/5] Collecting release folder (no zip)"
+  DEST="$ROOT/releases/$RELEASE_NAME"
+  rm -rf "$DEST"
+  mv "$RELEASE_DIR" "$DEST"
 
-echo "==> Release ready: $FINAL"
+  echo "==> [5/5] Release folder ready: $DEST"
+  echo "==> Artifact name: $ARTIFACT_NAME"
+  if [ -n "${GITHUB_OUTPUT:-}" ]; then
+    {
+      echo "release_dir=releases/$RELEASE_NAME"
+      echo "artifact_name=$ARTIFACT_NAME"
+    } >> "$GITHUB_OUTPUT"
+  fi
+else
+  echo "==> [4/5] Packaging $ZIP_NAME"
+  FINAL="$(rd_package_and_collect "$ROOT" "$STAGE" "$RELEASE_NAME" "$ZIP_NAME")"
+
+  echo "==> [5/5] Cleaning staging dir"
+  echo "==> Release ready: $FINAL"
+fi

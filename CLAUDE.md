@@ -2,6 +2,18 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Git & GitHub hygiene
+
+**Never push AI-coding artifacts to GitHub.** Implementation plans, design specs, and any
+AI-assistant working files — e.g. `docs/superpowers/` (plans/specs), `.claude/`,
+`.superpowers/`, `claude/` — must NOT be committed to or pushed to the remote repository.
+They are gitignored; keep it that way. Do not `git add` them and do not push commits that
+contain them. `CLAUDE.md` / `AGENTS.md` (this guidance file) is the only AI-related file
+intentionally tracked.
+
+**Never push to the remote without explicit user consent.** Commit locally, then ask before
+pushing.
+
 ## Project Overview
 
 Retro Debugger (v0.64.74) is a real-time debugger for 8-bit computers: Commodore 64, Atari XL/XE, and NES. It embeds full emulator engines (VICE v3.10-WIP, Atari800, NestopiaUE) and provides cycle-accurate debugging through an ImGui-based interface. Previously known as "C64 65XE NES Debugger".

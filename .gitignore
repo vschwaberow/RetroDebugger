@@ -38,3 +38,9 @@ core
 !src/Emulators/nestopiaue/core/*
 !src/Emulators/nestopiaue/core/**/*
 /releases/
+
+# AI-coding artifacts — never commit/push to GitHub (see CLAUDE.md)
+docs/superpowers/
+.claude/
+.superpowers/
+claude/
