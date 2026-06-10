@@ -1,0 +1,40 @@
+name: macOS build
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout RetroDebugger
+        uses: actions/checkout@v6
+
+      - name: Build and package release
+        id: release
+        run: |
+          set -euxo pipefail
+          chmod +x ./tools/make-release/make-release-macos.sh
+          ./tools/make-release/make-release-macos.sh
+        env:
+          # Empty/unset on a free Apple account -> ad-hoc signing.
+          # Populate these repo secrets to enable Developer ID + notarization
+          # (see Phase 4 in the release plan):
+          MACOS_SIGN_IDENTITY:   ${{ secrets.MACOS_SIGN_IDENTITY }}
+          MACOS_NOTARY_APPLE_ID: ${{ secrets.MACOS_NOTARY_APPLE_ID }}
+          MACOS_NOTARY_TEAM_ID:  ${{ secrets.MACOS_NOTARY_TEAM_ID }}
+          MACOS_NOTARY_PASSWORD: ${{ secrets.MACOS_NOTARY_PASSWORD }}
+
+      # macOS uploads the ditto .zip itself (preserves the .app bundle); GitHub
+      # wraps it in the artifact zip. Folder-upload would corrupt the bundle.
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.release.outputs.artifact_name }}
+          path: ${{ steps.release.outputs.zip_path }}
+          if-no-files-found: error
