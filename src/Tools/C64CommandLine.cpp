@@ -635,6 +635,11 @@ void c64PerformStartupTasksThreaded()
 			debugInterface->symbols->DeleteAllSymbols();
 			debugInterface->symbols->ParseSourceDebugInfo(c64SettingsPathToDebugInfo);
 		}
+
+		if (c64SettingsDefaultSegment != NULL)
+		{
+			debugInterface->symbols->SetPreviousSegment(c64SettingsDefaultSegment);
+		}
 	}
 
 	// skip any automatic loading if jukebox is active
@@ -891,6 +896,12 @@ void C64DebuggerParseCommandLine2()
 			char *arg = c64ParseCommandLineGetArgument();
 			c64SettingsPathToDebugInfo = new CSlrString(arg);
 		}
+		else if (!strcmp(cmd, "segment") || !strcmp(cmd, "seg"))
+		{
+			char *arg = c64ParseCommandLineGetArgument();
+			LOGD("default segment='%s'", arg);
+			c64SettingsDefaultSegment = new CSlrString(arg);
+		}
 		else if (!strcmp(cmd, "autojmp") || !strcmp(cmd, "autojump"))
 		{
 			cmdLineOptionDoAutoJmp = true;
@@ -1100,6 +1111,14 @@ void C64DebuggerPassConfigToRunningInstance()
 	{
 		byteBuffer->PutU8(C64D_PASS_CONFIG_DATA_DEBUG_INFO);
 		byteBuffer->PutSlrString(c64SettingsPathToDebugInfo);
+	}
+
+	if (c64SettingsDefaultSegment)
+	{
+		LOGD("c64SettingsDefaultSegment");
+		c64SettingsPathToWatches->DebugPrint("c64SettingsDefaultSegment=");
+		byteBuffer->PutU8(C64D_PASS_CONFIG_DATA_DEFAULT_SEGMENT);
+		byteBuffer->PutSlrString(c64SettingsDefaultSegment);
 	}
 
 	if (c64CommandLineHardReset)

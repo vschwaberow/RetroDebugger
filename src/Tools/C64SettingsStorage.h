@@ -202,6 +202,7 @@ extern CSlrString *c64SettingsPathToSymbols;
 extern CSlrString *c64SettingsPathToWatches;
 extern CSlrString *c64SettingsPathToBreakpoints;
 extern CSlrString *c64SettingsPathToDebugInfo;
+extern CSlrString *c64SettingsDefaultSegment;
 
 extern bool c64SettingsUseNativeEmulatorMonitor;
 

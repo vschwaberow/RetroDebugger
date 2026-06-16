@@ -48,6 +48,7 @@ public:
 	void ActivateSelectedSegment();
 	void ActivateSegment(CDebugSymbolsSegment *segment);
 	void DeactivateSegment();
+	void SetPreviousSegment(CSlrString* segmentName);
 	
 	//
 	void SelectNextSegment();
