@@ -209,6 +209,7 @@ CSlrString *c64SettingsPathToSymbols = NULL;
 CSlrString *c64SettingsPathToBreakpoints = NULL;
 CSlrString *c64SettingsPathToWatches = NULL;
 CSlrString *c64SettingsPathToDebugInfo = NULL;
+CSlrString *c64SettingsDefaultSegment = NULL;
 
 bool c64SettingsUseNativeEmulatorMonitor = false;
 

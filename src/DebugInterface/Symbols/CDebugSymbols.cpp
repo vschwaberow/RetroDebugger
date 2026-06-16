@@ -1518,6 +1518,11 @@ void CDebugSymbols::DeactivateSegment()
 	guiMain->UnlockMutex();
 }
 
+void CDebugSymbols::SetPreviousSegment(CSlrString* segmentName)
+{
+	this->previousSegmentName = segmentName;
+}
+
 //
 void CDebugSymbols::SelectNextSegment()
 {
